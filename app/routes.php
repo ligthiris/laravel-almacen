@@ -21,7 +21,7 @@ Route::get('/productos', function()
 	return View::make('products');
 });
 
-Route::get('/test', function()
+Route::get('/categorias', function()
 {
-	return View::make('test');
+	return View::make('categories');
 });
