@@ -48,6 +48,7 @@
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($categorias as $categoria)
                         <tr>
                             <td>
                                 <div class="btn-group">
@@ -60,54 +61,10 @@
                                     </ul>
                                 </div>
                             </td>
-                            <td>Alimentos</td>
-                            <td>Alimentos y comida</td>
+                            <td>{{$categoria->nombre}}</td>
+                            <td>{{$categoria->descripcion}}</td>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                                        <span class="fa fa-bars"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> Editar</a></li>
-                                        <li><a href="#"><i class="fa fa-trash-o"></i> Eliminar</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>Bebidas</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                                        <span class="fa fa-bars"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> Editar</a></li>
-                                        <li><a href="#"><i class="fa fa-trash-o"></i> Eliminar</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>Ropa</td>
-                            <td>Ropa y accesorios</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                                        <span class="fa fa-bars"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> Editar</a></li>
-                                        <li><a href="#"><i class="fa fa-trash-o"></i> Eliminar</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td>Electrodomésticos</td>
-                            <td>Artefactos para cocina</td>
-                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -21,7 +21,4 @@ Route::get('/productos', function()
 	return View::make('products');
 });
 
-Route::get('/categorias', function()
-{
-	return View::make('categories');
-});
+Route::get('/categorias', 'CategoriaController@getCategorias');
