@@ -28,9 +28,9 @@
                 </ol>
             </div>
             <div class="col-md-2">
-                <button type="button" class="btn btn-block btn-primary">
+                <a href="/categorias/crear" type="button" class="btn btn-block btn-primary">
                     <span class="fa fa-plus"></span> Nueva categoría
-                </button>
+                </a>
             </div>
         </div>
         <!-- /.row -->
