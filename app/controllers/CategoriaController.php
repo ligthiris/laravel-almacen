@@ -13,6 +13,12 @@ class CategoriaController extends BaseController {
 		return View::make('categories_form');
 	}
 
+	public function editarCategoria($id)
+	{
+		$categoria = Categoria::find($id);
+		return View::make('categories_form', ['categoria' => $categoria]);
+	}
+
 	public function getCategoria($id)
 	{
 		$categoria = Categoria::find($id);
@@ -21,15 +27,28 @@ class CategoriaController extends BaseController {
 
 	public function saveCategorias()
 	{
+		$id = Input::get('id');
 		$nombre = Input::get('nombre');
 		$descripcion = Input::get('descripcion');
 
+		if(empty($id)){
+			$categoria = new Categoria();
+		}else{
+			$categoria =  Categoria::find($id);
+		}
 		$categoria = new Categoria();
 		$categoria->nombre = $nombre;
 		$categoria->descripcion = $descripcion;
 		$categoria->save();
 
-		Redirect::to('/categorias');
+		return Redirect::to('/categorias');
+	}
+
+	public function deleteCategoria($id)
+	{
+		$categoria = Categoria::find($id);
+		$categoria -> delete;
+		return Response::json($categoria);
 	}
 
 }

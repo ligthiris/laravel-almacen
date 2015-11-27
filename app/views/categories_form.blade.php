@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="page-header">
-                    <span class="fa fa-tag"></span> Nueva Categoría
+                    <span class="fa fa-tag"></span> @if(isset($categoria)) Editar @else Nueva @endif Categoría
                 </h1>
             </div>
         </div>
@@ -25,7 +25,7 @@
                         <i class="fa fa-tag"></i> <a href="/categorias">Categorías</a>
                     </li>
                     <li class="active">
-                        <i class="fa fa-plus"></i> Nueva categoría
+                        <i class="fa fa-plus"></i> @if(isset($categoria)) Editar @else Nueva @endif categoría
                     </li>
                 </ol>
             </div>
@@ -47,16 +47,16 @@
             <div class="col-md-6">
                 <form id="formCategory" role="form" method="post" action="/categorias">
 
-                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="id" value="@if(isset($categoria)){{$categoria->id}}@endif">
 
                     <div class="form-group">
                         <label>Nombre</label>
-                        <input name="nombre" class="form-control" placeholder="Nombre de la categoría" value="">
+                        <input name="nombre" class="form-control" placeholder="Nombre de la categoría" value="@if(isset($categoria)){{$categoria->nombre}}@endif">
                     </div>
 
                     <div class="form-group">
                         <label>Descripción</label>
-                        <input name="descripcion" class="form-control" placeholder="Descripción de la categoría" value="">
+                        <input name="descripcion" class="form-control" placeholder="Descripción de la categoría" value="@if(isset($categoria)){{$categoria->descripcion}}@endif">
                     </div>
 
                 </form>

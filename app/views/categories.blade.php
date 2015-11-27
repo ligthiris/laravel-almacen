@@ -56,8 +56,8 @@
                                         <span class="fa fa-bars"></span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> Editar</a></li>
-                                        <li><a href="#"><i class="fa fa-trash-o"></i> Eliminar</a></li>
+                                        <li><a href="/categorias/editar/{{$categoria->id}}"><i class="fa fa-pencil-square-o"></i> Editar</a></li>
+                                        <li><a href="/categorias/eliminar/{{$categoria->id}}"><i class="fa fa-trash-o"></i> Eliminar</a></li>
                                     </ul>
                                 </div>
                             </td>
